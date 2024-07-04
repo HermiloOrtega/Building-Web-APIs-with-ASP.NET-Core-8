@@ -34,5 +34,11 @@ namespace HPlusSport.API.Controllers
             }
             return Ok(product);
         }
+
+        [HttpGet("available")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetAvailableProducts()
+        {
+            return await _context.Products.Where(p => p.IsAvailable).ToArrayAsync();
+        }
     }
 }
