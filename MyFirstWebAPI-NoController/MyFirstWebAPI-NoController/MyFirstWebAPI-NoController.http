@@ -1,0 +1,6 @@
+@MyFirstWebAPI_NoController_HostAddress = http://localhost:5160
+
+GET {{MyFirstWebAPI_NoController_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
